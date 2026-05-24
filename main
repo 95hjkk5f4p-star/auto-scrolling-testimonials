@@ -1,0 +1,77 @@
+const testimonials = [
+{
+name: "mohamed magdy",
+ content:
+ "The place is excellent. I took the Digital Marketing Diploma and received follow-up from the initial payment, throughout the course, and afterward. A great feature is that they provide job opportunities for those who complete the course and submit all assignments.",
+ image: "https://lh3.googleusercontent.com/a-/ALV-UjUlZrtg88MrpRC7ZrCOlQvrzPDTCJr9UId1mSjM0PLStXAPUhk=w144-h144-p-rp-mo-br100",
+},
+{
+ name:"ibrahim khaled",
+ content:
+ "Well invested time and effort for a really supporting and goal oriented facility.We had learned what sharpen our skill on data and prepare us for what is coming.Had enjoyed my time with you guys.",
+ image: "https://lh3.googleusercontent.com/a/ACg8ocKuLWu-uDXY2O8uRLkBtZYBU1iYaQqojURjl1Ui2j1eV5iFDXg=w144-h144-p-rp-mo-br100",
+},
+{
+name: "khaled sallam",
+ content:
+ "The course was very useful, and I truly enjoyed gaining a lot of valuable knowledge. Eng. Youssef was very professional and explained everything in a smooth and clear manner.",
+ image: "https://lh3.googleusercontent.com/a-/ALV-UjX9RQN7xiE0aExO6I6LcCmiE-rL8QAjlWX8eXFUi9-6AzGfSrL1=w144-h144-p-rp-mo-br100",
+},
+{
+name: "Mohamed abdsamed Elnouno",
+ content:
+ "professional and excellent in every aspect, whether it's the study material, follow-up, or explanation. Special thanks to Mr. Mohamed Salah for his patience with us and the effort he put into the explanation. I really benefited a lot. Thank you very much 👍.",
+ image: "https://lh3.googleusercontent.com/a/ACg8ocLZEUKeh_DKtAhrf7u8vf_xH-hxquWmkzb-hsphNL13K1_ndA=w144-h144-p-rp-mo-br100",
+},
+{
+name: "hala adel",
+ content:
+ "I had a great experience with this course.The content was well-structured clear and very informative.The instructor explained everything in a simple and practical way, which made the learning process enjoyable and effective.I truly feel that I gained valuable knowledge and skills, and I would definitely recommend this course to anyone interested.",
+ image: "https://lh3.googleusercontent.com/a-/ALV-UjXHAsL4WR_bSdIeKt_VD6E7t5bbABaKla3lLWMFyyn4ZOIJgWWV=w144-h144-p-rp-mo-br100",
+},
+{
+name: "Mohamed mubarak Elsharif",
+ content:
+ "It was a great experience. I attended a data analysis course with the IMP team and they were very professional and well organized. The explanation was clear, the interaction was excellent, and the content was practical and useful. I truly appreciate their efforts and wish them continued success.",
+ image: "https://lh3.googleusercontent.com/a-/ALV-UjW8DX7u5Kv8uEpk0fWZhYOWyonXCIGzsIqz1vXUPA5NycAbKyo5IQ=w144-h144-p-rp-mo-ba3-br100",
+},
+{
+name: "Mohamed Samy",
+ content:
+ "The instructor well explained the content clearly, and many practicing during the session and assignments for every session.Very motivated and informative course",
+ image: "https://lh3.googleusercontent.com/a/ACg8ocIG6broDjHTDyTVu8eSzVvRNPazaRAaSfDoVMj2-9bgkkFlYQ=w144-h144-p-rp-mo-br100",
+},
+{
+name: "akram El Fakhrani",
+ content:
+ "one of highly recommended diploma for any one who deals with Data analysis or Big data management.Practical and useful in daily tasks and work with great team and instructors",
+ image: "https://lh3.googleusercontent.com/a-/ALV-UjXIWM5Qp8hQOVygoSXYONi9cM-S3eWQIQE-13hS1VnfxLSDEjrR=w144-h144-p-rp-mo-ba2-br100",
+},
+{
+name: "Ahmad Ibrahim",
+ content:
+ "One of the best instructor in IMP. Really, thank you your efforts with us and thanks of this course, I have new promotion in my work.",
+ image: "https://lh3.googleusercontent.com/a-/ALV-UjU5k7HqUe0e-cHCmRbgSSoFS_5r665TpGQ3XVoU2bsnoJ-hiERc=w144-h144-p-rp-mo-br100",
+}
+];
+
+const testimonialCard = (testimonial) => {
+return `
+<div class="testimonial-card">
+<img src="${testimonial.image}" alt="${testimonial.name}" class="testimonial-image">
+<h3 class="testimonial-name">${testimonial.name}</h3>
+<p class="testimonial-content">${testimonial.content}</p>
+</div>
+`;
+};
+
+const populateColumn = (columnId) => {
+  const column = document.getElementById(columnId);
+  [...testimonials, ...testimonials].forEach((testimonial) => {
+    column.innerHTML += testimonialCard(testimonial);
+  });
+};
+
+populateColumn("column1");
+populateColumn("column2");
+populateColumn("column3");
