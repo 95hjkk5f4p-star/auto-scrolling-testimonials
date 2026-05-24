@@ -72,6 +72,9 @@ const populateColumn = (columnId) => {
   });
 };
 
-populateColumn("column1");
-populateColumn("column2");
-populateColumn("column3");
+testimonials.sort(()=> math.random() - 0.5);
+populatecolumn("column1");
+testimonials.sort(()=> math.random() - 0.5);
+populatecolumn("column2");
+testimonials.sort(()=> math.random() - 0.5);
+populatecolumn("column3");
